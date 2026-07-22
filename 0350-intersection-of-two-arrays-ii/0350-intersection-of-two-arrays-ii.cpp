@@ -3,12 +3,7 @@ public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
         unordered_map<int, int> freq;
         for(int i =0; i < nums1.size(); i++){
-            if(freq.find(nums1[i]) == freq.end()){
-                freq[nums1[i]] = 1;
-            }
-            else if (freq.find(nums1[i]) != freq.end()){
-                freq[nums1[i]] += 1;
-            }
+            freq[nums1[i]]++;
         }
     // created the hash map now need to checkk the existance
     vector<int> ans;
